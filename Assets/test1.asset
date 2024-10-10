@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95e66c6366d904e98bc83428217d4fd7, type: 3}
+  m_Name: test1
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"graph":{"variables":{"Kind":"Flow","collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[],"controlOutputDefinitions":[],"valueInputDefinitions":[],"valueOutputDefinitions":[],"title":null,"summary":null,"pan":{"x":-1480.913,"y":-397.4713},"zoom":1.0,"elements":[{"coroutine":false,"defaultValues":{},"position":{"x":-204.0,"y":-144.0},"guid":"ba10ca9d-da09-414b-878a-2401eaeed8a1","$version":"A","$type":"Unity.VisualScripting.Start"},{"coroutine":false,"defaultValues":{},"position":{"x":-204.0,"y":60.0},"guid":"f65369bd-c2e1-4408-96ee-3e0578b6371e","$version":"A","$type":"Unity.VisualScripting.Update","$id":"11"},{"specifyFallback":false,"kind":"Object","defaultValues":{"name":{"$content":"speed","$type":"System.String"},"object":null},"position":{"x":-202.0,"y":179.0},"guid":"1af010a8-d5a2-4346-9ee8-2b42eb3dcb3b","$version":"A","$type":"Unity.VisualScripting.GetVariable"},{"specifyFallback":false,"kind":"Object","defaultValues":{"name":{"$content":"hp","$type":"System.String"},"object":null},"position":{"x":-201.0,"y":324.0},"guid":"c1c9afdd-7add-4139-b862-d17ba0f92aae","$version":"A","$type":"Unity.VisualScripting.GetVariable"},{"specifyFallback":false,"kind":"Object","defaultValues":{"name":{"$content":"mp","$type":"System.String"},"object":null},"position":{"x":-197.0,"y":467.0},"guid":"9a5a6252-d601-4ee0-ba73-59d947abf8a8","$version":"A","$type":"Unity.VisualScripting.GetVariable"},{"chainable":false,"parameterNames":["message"],"member":{"name":"print","parameterTypes":["System.Object"],"targetType":"UnityEngine.MonoBehaviour","targetTypeName":"UnityEngine.MonoBehaviour","$version":"A"},"defaultValues":{},"position":{"x":8.0,"y":61.0},"guid":"90ee5d16-415f-43eb-9491-cd72883dbe22","$version":"A","$type":"Unity.VisualScripting.InvokeMember","$id":"19"},{"sourceUnit":{"$ref":"11"},"sourceKey":"trigger","destinationUnit":{"$ref":"19"},"destinationKey":"enter","guid":"90f10404-1586-4853-a969-5e3a66c8ca9f","$type":"Unity.VisualScripting.ControlConnection"}],"$version":"A"}}'
+    _objectReferences: []
