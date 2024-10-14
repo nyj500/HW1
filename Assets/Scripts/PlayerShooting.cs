@@ -29,7 +29,7 @@ public class PlayerShooting : MonoBehaviour
 
         if (enemyCount >= 5)
         {
-            pm.jumpForce = 90f;  // 다른 스크립트의 변수 값 변경
+            pm.jumpForce = 150f;  // 다른 스크립트의 변수 값 변경
             Debug.Log("jumpForce 값이 90로 변경되었습니다.");
         }
 

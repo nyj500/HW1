@@ -1,23 +1,29 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField]
-    float speed = 10.0f;  // 이동 속도
-    
-    public float jumpForce = 1.0f;  // 점프 힘
+    public GameManager gm;
 
-    [SerializeField]
-    float rotationSpeed = 150f;
+    public float acceleration = 20.0f;  // 가속도
+    public float deceleration = 20.0f;  // 감속도
+    public float currentSpeed = 0.0f;  // 현재 속도
+    public float maxSpeed = 60.0f;  // 최대 속도
+    public float jumpForce = 70.0f;  // 점프 힘
+
+    public float rotationSpeed = 150f;
+
 
     public Rigidbody rb;
     private bool isGrounded = true;
+    
     private Animator anim;
-    public float gravityScale = 2.0f;
+    public float gravityScale = 1.0f;
     private void Start()
     {
         anim = GetComponent<Animator>();
         rb.freezeRotation = true;  // Rigidbody의 회전은 물리적으로 고정
+        rb.useGravity = true;
     }
 
     void FixedUpdate()
@@ -25,27 +31,29 @@ public class PlayerMovement : MonoBehaviour
         // WASD로 이동 처리
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
+        bool isMoving = Mathf.Abs(moveHorizontal) > 0 || Mathf.Abs(moveVertical) > 0;
+
         bool isHKeyPressed = Mathf.Abs(Input.GetAxis("Horizontal")) > 0;
         bool isVKeyPressed = Mathf.Abs(Input.GetAxis("Vertical")) > 0;
 
         if (isHKeyPressed || isVKeyPressed)
         {
             // 이동 방향을 캐릭터가 바라보는 방향을 기준으로 설정
-            Vector3 movement = (transform.forward * moveVertical + transform.right * moveHorizontal).normalized * speed * Time.deltaTime;
+            Vector3 movement = (transform.forward * moveVertical + transform.right * moveHorizontal).normalized * currentSpeed * Time.deltaTime;
 
-            // if (movement != Vector3.zero)
-            // {
-            //     // 캐릭터가 이동하는 방향으로 회전
-            //     Quaternion toRotation = Quaternion.LookRotation(movement, Vector3.up);
-            //     transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
-            // }
-
+            if (isMoving)
+            {
+                // 가속도 적용
+                currentSpeed += acceleration * Time.deltaTime;
+                currentSpeed = Mathf.Min(currentSpeed, maxSpeed);  // 최대 속도 제한
+            }
             rb.MovePosition(rb.position + movement);  // Rigidbody로 이동 처리
             anim.SetBool("isRunning", true);
         }
         else
         {
             anim.SetBool("isRunning", false);
+            currentSpeed = 0;
         }
 
         // 점프 처리
@@ -77,6 +85,11 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))  // 땅에 닿으면 다시 점프 가능
         {
             isGrounded = true;
+        }
+
+        if (collision.gameObject.CompareTag("Obstacle"))  
+        {
+            gm.LoadLoseScene();
         }
     }
 }
