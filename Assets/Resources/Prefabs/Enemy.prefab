@@ -838,6 +838,7 @@ GameObject:
   - component: {fileID: 5210817373283827869}
   - component: {fileID: 4767201247705276676}
   - component: {fileID: 4853126238194950947}
+  - component: {fileID: 8237475718739375128}
   m_Layer: 11
   m_Name: Enemy
   m_TagString: Enemy
@@ -966,7 +967,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
@@ -991,13 +992,32 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5867027936643193003}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 44aaa25e1c3aa457b945cb16312a4c64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
   moveRadius: 100
+--- !u!114 &8237475718739375128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5867027936643193003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 139d1d7d8d5d4431e977b0ed4fb826bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: 0
+  baseTransform: {fileID: 0}
+  baseAttackDistance: 0
+  speed: 20
+  explosionRange: 5
+  explosionEffectPrefab: {fileID: 0}
+  damageToBase: 10
 --- !u!1 &6311530521514974313
 GameObject:
   m_ObjectHideFlags: 0

@@ -89,7 +89,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Obstacle"))  
         {
-            gm.LoadLoseScene();
+            GameManager.LoadLoseScene();
         }
     }
 }

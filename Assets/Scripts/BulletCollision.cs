@@ -11,9 +11,10 @@ public class BulletCollision : MonoBehaviour
         // 충돌한 물체가 "Enemy" 태그를 가지고 있는지 확인
         if (collision.gameObject.CompareTag("Enemy"))
         {
+            
             // 적을 파괴
             Destroy(collision.gameObject);
-
+            
             // 적이 사라진 카운트를 ShootingController로 전달
             if (PlayerShooting != null)
             {

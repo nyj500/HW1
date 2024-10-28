@@ -9,6 +9,7 @@ TagManager:
   - Undefined
   - Ground
   - Obstacle
+  - MainBase
   layers:
   - Default
   - TransparentFX

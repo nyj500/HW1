@@ -26,13 +26,7 @@ public class PlayerShooting : MonoBehaviour
             Shoot();
             Debug.Log("Shoot");
         }
-
-        if (enemyCount >= 5)
-        {
-            pm.jumpForce = 150f;  // 다른 스크립트의 변수 값 변경
-            Debug.Log("jumpForce 값이 90로 변경되었습니다.");
-        }
-
+        
         UpdateEnemyCountUI();
     }
 
@@ -72,6 +66,11 @@ public class PlayerShooting : MonoBehaviour
     public void EnemyDestroyed()
     {
         enemyCount++;
+        if (enemyCount >= 5)
+        {
+            pm.jumpForce = 150f;
+        }
+
         Debug.Log("Enemy destroyed. Count: " + enemyCount);
     }
 

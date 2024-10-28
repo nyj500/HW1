@@ -27,12 +27,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void LoadLoseScene()
+    public static void LoadLoseScene()
     {
         SceneManager.LoadScene("Scenes/LoseScene");
     }
 
-    void LoadWinScene()
+    public static void LoadWinScene()
     {
         SceneManager.LoadScene("Scenes/WinScene");
     }
