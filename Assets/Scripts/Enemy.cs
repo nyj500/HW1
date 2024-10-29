@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         // 일정 시간이 지나면 적을 파괴
-        Destroy(gameObject, lifetime);
+        // Destroy(gameObject, lifetime);
     }
 
     void OnCollisionEnter(Collision collision)

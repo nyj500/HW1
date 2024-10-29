@@ -17,6 +17,7 @@ public class PlayerShooting : MonoBehaviour
     public Text enemyCountText;
 
     public PlayerMovement pm;
+    public GameObject bulletEffectPrefab;
 
     void Update()
     {
@@ -25,9 +26,17 @@ public class PlayerShooting : MonoBehaviour
         {
             Shoot();
             Debug.Log("Shoot");
+            PlayBulletEffect();
         }
-        
+
         UpdateEnemyCountUI();
+    }
+
+    void PlayBulletEffect()
+    {
+        GameObject effectInstance = Instantiate(bulletEffectPrefab, bulletSpawnPoint.position, Quaternion.identity);
+
+        Destroy(effectInstance, 1f);
     }
 
     void Shoot()

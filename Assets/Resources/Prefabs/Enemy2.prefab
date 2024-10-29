@@ -840,7 +840,7 @@ GameObject:
   - component: {fileID: 4853126238194950947}
   - component: {fileID: 8237475718739375128}
   m_Layer: 11
-  m_Name: Enemy
+  m_Name: Enemy2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -856,7 +856,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 930, y: 10, z: 396}
-  m_LocalScale: {x: 40, y: 40, z: 40}
+  m_LocalScale: {x: 20, y: 20, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4418546108210310105}
@@ -997,7 +997,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44aaa25e1c3aa457b945cb16312a4c64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 20
   moveRadius: 100
 --- !u!114 &8237475718739375128
 MonoBehaviour:
@@ -1014,11 +1014,11 @@ MonoBehaviour:
   currentState: 0
   baseTransform: {fileID: 0}
   baseRadius: 5
-  speed: 20
+  speed: 30
   explosionRange: 10
   explosionEffectPrefab: {fileID: 1563002215135300491, guid: f40ef142fa6ce40fab86877af3b35f04,
     type: 3}
-  damageToBase: 10
+  damageToBase: 4
 --- !u!1 &6311530521514974313
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class BulletCollision : MonoBehaviour
 {
@@ -12,15 +13,17 @@ public class BulletCollision : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             
+
             // 적을 파괴
             Destroy(collision.gameObject);
-            
+
             // 적이 사라진 카운트를 ShootingController로 전달
             if (PlayerShooting != null)
             {
                 PlayerShooting.EnemyDestroyed();
             }
         }
+        
 
         // 총알을 파괴
         Destroy(gameObject);

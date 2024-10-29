@@ -5,9 +5,11 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     public GameObject enemyPrefab;  // 적 프리팹
+    public GameObject enemyPrefab2;
     public Vector3 spawnAreaMin;  // 스폰 영역 최소 값
     public Vector3 spawnAreaMax;  // 스폰 영역 최대 값
     public int enemyCount = 5;  // 한 번에 스폰할 적 수
+    public int enemyCount2 = 1;
     public float spawnInterval = 5.0f;  // 몇 초마다 스폰할지 설정
 
     void Start()
@@ -29,6 +31,17 @@ public class EnemySpawner : MonoBehaviour
 
             // 적 생성
             Instantiate(enemyPrefab, randomPosition, Quaternion.identity);
+        }
+        for (int j = 0; j < enemyCount2; j++)
+        {
+            // 랜덤 위치 계산
+            Vector3 randomPosition2 = new Vector3(
+                Random.Range(spawnAreaMin.x, spawnAreaMax.x),
+                Random.Range(spawnAreaMin.y, spawnAreaMax.y),
+                Random.Range(spawnAreaMin.z, spawnAreaMax.z)
+            );
+            // 적 생성
+            Instantiate(enemyPrefab2, randomPosition2, Quaternion.identity);
         }
     }
 }

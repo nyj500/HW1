@@ -149,3 +149,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerShooting: {fileID: 0}
+  bulletEffectPrefab: {fileID: 5106057014179053389, guid: 29cf169a86c674b4d9cde02d46727ab6,
+    type: 3}
