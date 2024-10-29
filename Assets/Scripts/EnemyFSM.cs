@@ -30,8 +30,6 @@ public class EnemyFSM : MonoBehaviour
         
     }
 
-    //public Sight sightSensor;
-    
     public float baseRadius = 5f;
     public float speed = 5f;        // 이동 속도
     public float explosionRange = 5f; // 폭발 모드로 전환할 거리

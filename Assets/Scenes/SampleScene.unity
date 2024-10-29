@@ -14386,7 +14386,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 67e287d706a3c4633948a27d5d652dc7, type: 2}
+  - {fileID: -876546973899608171, guid: 48d960f3957a54cb2846d63f1c7780fa, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -35216,6 +35216,11 @@ PrefabInstance:
       propertyPath: ignoreLayerMask.m_Bits
       value: 1024
       objectReference: {fileID: 0}
+    - target: {fileID: 6949207459310199488, guid: 31f657b23b9534537af022450941f611,
+        type: 3}
+      propertyPath: bulletEffectPrefabMaterial
+      value: 
+      objectReference: {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 8318394014290686697, guid: 31f657b23b9534537af022450941f611,
         type: 3}
       propertyPath: gm

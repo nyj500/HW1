@@ -31,11 +31,23 @@ public class PlayerShooting : MonoBehaviour
 
         UpdateEnemyCountUI();
     }
-
+    
     void PlayBulletEffect()
     {
-        GameObject effectInstance = Instantiate(bulletEffectPrefab, bulletSpawnPoint.position, Quaternion.identity);
+        Vector3 effectPosition = Vector3.zero;
+        GameObject effectInstance = Instantiate(bulletEffectPrefab, bulletSpawnPoint);
 
+        ParticleSystem particleSystem = effectInstance.GetComponent<ParticleSystem>();
+
+        if (particleSystem != null)
+        {
+            particleSystem.Play(); // 파티클 시스템 재생
+        }
+        else
+        {
+            Debug.LogError("ParticleSystem이 effectInstance에 없습니다.");
+        }
+        
         Destroy(effectInstance, 1f);
     }
 

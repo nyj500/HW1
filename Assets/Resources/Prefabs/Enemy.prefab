@@ -837,7 +837,6 @@ GameObject:
   - component: {fileID: 6225229012183453401}
   - component: {fileID: 5210817373283827869}
   - component: {fileID: 4767201247705276676}
-  - component: {fileID: 4853126238194950947}
   - component: {fileID: 8237475718739375128}
   m_Layer: 11
   m_Name: Enemy
@@ -894,7 +893,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5867027936643193003}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a85c5e349cb17df4b85883ea088c2f95, type: 3}
   m_Name: 
@@ -906,7 +905,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5867027936643193003}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9aa840a3854ebd47b920d1a5c7d693f, type: 3}
   m_Name: 
@@ -985,20 +984,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifetime: 20
---- !u!114 &4853126238194950947
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5867027936643193003}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44aaa25e1c3aa457b945cb16312a4c64, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  moveRadius: 100
 --- !u!114 &8237475718739375128
 MonoBehaviour:
   m_ObjectHideFlags: 0
